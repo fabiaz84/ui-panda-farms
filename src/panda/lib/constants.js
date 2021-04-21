@@ -168,7 +168,7 @@ export const supportedPools = [
 		symbol: 'PNDA-ETH',
 		tokenSymbol: 'PNDA',
 		icon: '/pnda.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 1,
@@ -228,8 +228,7 @@ export const supportedPools = [
 		symbol: 'BNB',
 		tokenSymbol: 'BNB',
 		icon: '/wrap.png',
-		refUrl:
-			'#',
+		refUrl: '#',
 	},
 	{
 		pid: 6,
@@ -274,8 +273,7 @@ export const supportedPools = [
 		symbol: 'ADA-BNB',
 		tokenSymbol: 'ADA',
 		icon: '/caviar.png',
-		refUrl:
-			'#',
+		refUrl: '#',
 	},
 	{
 		pid: 9,
@@ -695,7 +693,7 @@ export const supportedPools = [
 		symbol: 'ALPHA-BNB',
 		tokenSymbol: 'ALPHA',
 		icon: '/pie.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 37,
@@ -755,7 +753,7 @@ export const supportedPools = [
 		symbol: 'TWT-BNB',
 		tokenSymbol: 'TWT',
 		icon: '/turtle.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 41,
@@ -875,7 +873,7 @@ export const supportedPools = [
 		symbol: 'vUSDC-BNB',
 		tokenSymbol: 'vUSDC',
 		icon: '/crab.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 49,
@@ -1040,7 +1038,7 @@ export const supportedPools = [
 		symbol: 'HELMET-BNB',
 		tokenSymbol: 'HELMET',
 		icon: '/hot.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 60,
@@ -1055,7 +1053,7 @@ export const supportedPools = [
 		symbol: 'BIFI-BNB',
 		tokenSymbol: 'BIFI',
 		icon: '/beef-chow-fun.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 61,
@@ -1070,7 +1068,7 @@ export const supportedPools = [
 		symbol: 'BTCST-BNB',
 		tokenSymbol: 'BTCST',
 		icon: '/bacon.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 62,
@@ -1145,7 +1143,7 @@ export const supportedPools = [
 		symbol: 'HGET-BNB',
 		tokenSymbol: 'HGET',
 		icon: '/herbal-tea.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 67,
@@ -1190,7 +1188,7 @@ export const supportedPools = [
 		symbol: 'MIR-BNB',
 		tokenSymbol: 'MIR',
 		icon: '/miantiao.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 70,
@@ -1265,7 +1263,7 @@ export const supportedPools = [
 		symbol: 'TLM-BNB',
 		tokenSymbol: 'TLM',
 		icon: '/octopus.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 75,
@@ -1280,7 +1278,7 @@ export const supportedPools = [
 		symbol: 'UBXT-BNB',
 		tokenSymbol: 'UBXT',
 		icon: '/bento.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 76,
@@ -1296,7 +1294,7 @@ export const supportedPools = [
 		tokenSymbol: 'CAKE',
 		poolType: 'pancake',
 		icon: '/maple-syrup.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 77,
@@ -1312,7 +1310,7 @@ export const supportedPools = [
 		tokenSymbol: 'BUSD',
 		poolType: 'pancake',
 		icon: '/blt.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 78,
@@ -1328,7 +1326,7 @@ export const supportedPools = [
 		tokenSymbol: 'ETH',
 		poolType: 'pancake',
 		icon: '/eth.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 79,
@@ -1344,7 +1342,7 @@ export const supportedPools = [
 		tokenSymbol: 'BTCB',
 		poolType: 'pancake',
 		icon: '/bubble-tea.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 80,
@@ -1360,7 +1358,7 @@ export const supportedPools = [
 		tokenSymbol: 'USDT',
 		poolType: 'pancake',
 		icon: '/binance.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 81,
@@ -1376,7 +1374,7 @@ export const supportedPools = [
 		tokenSymbol: 'USDT',
 		poolType: 'pancake',
 		icon: '/tofu.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 82,
@@ -1392,7 +1390,7 @@ export const supportedPools = [
 		tokenSymbol: 'BUNNY',
 		poolType: 'pancake',
 		icon: '/bacon.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 83,
@@ -1408,7 +1406,7 @@ export const supportedPools = [
 		tokenSymbol: 'DOT',
 		poolType: 'pancake',
 		icon: '/poke.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 84,
@@ -1424,7 +1422,7 @@ export const supportedPools = [
 		tokenSymbol: 'USDC',
 		poolType: 'pancake',
 		icon: '/cereals.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 85,
@@ -1440,7 +1438,7 @@ export const supportedPools = [
 		tokenSymbol: 'VAI',
 		poolType: 'pancake',
 		icon: '/pie.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 86,
@@ -1456,7 +1454,7 @@ export const supportedPools = [
 		tokenSymbol: 'LINK',
 		poolType: 'pancake',
 		icon: '/sandwich.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 87,
@@ -1472,7 +1470,7 @@ export const supportedPools = [
 		tokenSymbol: 'DAI',
 		poolType: 'pancake',
 		icon: '/pizza.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 88,
@@ -1488,7 +1486,7 @@ export const supportedPools = [
 		tokenSymbol: 'XRP',
 		poolType: 'pancake',
 		icon: '/rice-bowl.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 89,
@@ -1504,7 +1502,7 @@ export const supportedPools = [
 		tokenSymbol: 'ADA',
 		poolType: 'pancake',
 		icon: '/caviar.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 	{
 		pid: 90,
@@ -1520,6 +1518,6 @@ export const supportedPools = [
 		tokenSymbol: 'UNI',
 		poolType: 'pancake',
 		icon: '/unagi.png',
-		refUrl:	'#',
+		refUrl: '#',
 	},
 ]
