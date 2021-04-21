@@ -45,15 +45,19 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
 					{window.BinanceChain ? (
 						<>
 							<StyledWalletCard>
-							<WalletCard
-								icon={<img src={binanceSmartWalletLogo} style={{ height: 32 }} />}
-								onConnect={() => connect('bsc')}
-								title="Binance Smart Wallet"
-							/>
+								<WalletCard
+									icon={
+										<img src={binanceSmartWalletLogo} style={{ height: 32 }} />
+									}
+									onConnect={() => connect('bsc')}
+									title="Binance Smart Wallet"
+								/>
 							</StyledWalletCard>
 							<Spacer size="sm" />
 						</>
-					): ''}
+					) : (
+						''
+					)}
 					<StyledWalletCard>
 						<WalletCard
 							icon={<img src={walletConnectLogo} style={{ height: 32 }} />}
