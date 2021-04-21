@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { useWallet } from 'use-wallet'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 
 import metamaskLogo from '../../assets/img/metamask-fox.svg'
 import walletConnectLogo from '../../assets/img/wallet-connect.svg'
+import binanceSmartWalletLogo from '../../assets/img/binanceChainWallet.svg'
+import trustWalletLogo from '../../assets/img/trustWallet.svg'
+import mathWalletLogo from '../../assets/img/mathWallet.png'
 
 import Button from '../Button'
 import Modal, { ModalProps } from '../Modal'
@@ -13,6 +16,8 @@ import ModalTitle from '../ModalTitle'
 import Spacer from '../Spacer'
 
 import WalletCard from './components/WalletCard'
+
+import { isMobile } from 'react-device-detect'
 
 const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
 	const { account, connect } = useWallet()
@@ -34,6 +39,44 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
 							icon={<img src={metamaskLogo} style={{ height: 32 }} />}
 							onConnect={() => connect('injected')}
 							title="Metamask"
+						/>
+					</StyledWalletCard>
+					<Spacer size="sm" />
+					{window.BinanceChain ? (
+						<>
+							<StyledWalletCard>
+							<WalletCard
+								icon={<img src={binanceSmartWalletLogo} style={{ height: 32 }} />}
+								onConnect={() => connect('bsc')}
+								title="Binance Smart Wallet"
+							/>
+							</StyledWalletCard>
+							<Spacer size="sm" />
+						</>
+					): ''}
+					<StyledWalletCard>
+						<WalletCard
+							icon={<img src={walletConnectLogo} style={{ height: 32 }} />}
+							onConnect={() => connect('walletconnect')}
+							title="WalletConnect"
+						/>
+					</StyledWalletCard>
+					<Spacer size="sm" />
+					<StyledWalletCard>
+						<WalletCard
+							icon={<img src={mathWalletLogo} style={{ height: 32 }} />}
+							onConnect={() => connect('injected')}
+							title="Math Wallet"
+						/>
+					</StyledWalletCard>
+					<Spacer size="sm" />
+					<StyledWalletCard>
+						<WalletCard
+							icon={<img src={trustWalletLogo} style={{ height: 32 }} />}
+							onConnect={() =>
+								isMobile ? connect('injected') : connect('walletconnect')
+							}
+							title="Trust Wallet"
 						/>
 					</StyledWalletCard>
 					<Spacer size="sm" />

@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 
 import usePanda from './usePanda'
-import { useWallet } from 'use-wallet'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 
 import { unstake, getMasterChefContract, getRefUrl } from '../panda/utils'
 

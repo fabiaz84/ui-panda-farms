@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
-import { useWallet } from 'use-wallet'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTokenBalance from '../../../hooks/useTokenBalance'
 import usePanda from '../../../hooks/usePanda'
 import { getPandaAddress } from '../../../panda/utils'

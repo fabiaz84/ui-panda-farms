@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { provider } from 'web3-core'
 
 import BigNumber from 'bignumber.js'
-import { useWallet } from 'use-wallet'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { Contract } from 'web3-eth-contract'
 
 import {

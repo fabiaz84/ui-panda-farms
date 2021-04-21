@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
-import { useWallet } from 'use-wallet'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 
 import pndaBanner from '../../assets/img/pnda.png'
 
