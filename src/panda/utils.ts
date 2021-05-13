@@ -243,6 +243,51 @@ export const getStaked = async (
   }
 }
 
+export const getLastWithDrawBlock = async (
+  masterChefContract: Contract,
+  pid: number,
+  account: string,
+): Promise<BigNumber> => {
+  try {
+    const { lastWithdrawBlock } = await masterChefContract.methods
+      .userInfo(pid, account)
+      .call()
+    return new BigNumber(lastWithdrawBlock)
+  } catch {
+    return new BigNumber(0)
+  }
+}
+
+export const getFirstDepositBlock = async (
+  masterChefContract: Contract,
+  pid: number,
+  account: string,
+): Promise<BigNumber> => {
+  try {
+    const { firstDepositBlock } = await masterChefContract.methods
+      .userInfo(pid, account)
+      .call()
+    return new BigNumber(firstDepositBlock)
+  } catch {
+    return new BigNumber(0)
+  }
+}
+
+export const getLastDepositBlock = async (
+  masterChefContract: Contract,
+  pid: number,
+  account: string,
+): Promise<BigNumber> => {
+  try {
+    const { lastDepositBlock } = await masterChefContract.methods
+      .userInfo(pid, account)
+      .call()
+    return new BigNumber(lastDepositBlock)
+  } catch {
+    return new BigNumber(0)
+  }
+}
+
 export const getWbnbPrice = async (pnda: Panda): Promise<BigNumber> => {
   const wbnbPriceContract = getWbnbPriceContract(pnda)
   const amount = await wbnbPriceContract.methods.latestAnswer().call()

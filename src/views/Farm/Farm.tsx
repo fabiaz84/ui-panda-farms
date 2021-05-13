@@ -11,6 +11,7 @@ import usePanda from '../../hooks/usePanda'
 import { getMasterChefContract } from '../../panda/utils'
 import { getContract } from '../../utils/erc20'
 import Harvest from './components/Harvest'
+import Fee from './components/Fee'
 import { PoolType } from '../../contexts/Farms/types'
 import Stake from './components/Stake'
 
@@ -80,6 +81,10 @@ const Farm: React.FC = () => {
 							poolType={poolType}
 						/>
 					</StyledCardWrapper>
+					<Spacer />
+					<StyledCardWrapper>
+						<Fee pid={pid} />
+					</StyledCardWrapper>
 				</StyledCardsWrapper>
 				<Spacer size="lg" />
 				<StyledInfo>
@@ -111,14 +116,14 @@ const StyledFarm = styled.div`
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	@media (max-width: 768px) {
+	@media (max-width: 102px) {
 		width: 100%;
 	}
 `
 
 const StyledCardsWrapper = styled.div`
 	display: flex;
-	width: 600px;
+	width: 900px;
 	@media (max-width: 768px) {
 		width: 100%;
 		flex-flow: column nowrap;
