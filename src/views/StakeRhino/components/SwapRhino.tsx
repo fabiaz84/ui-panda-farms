@@ -6,6 +6,7 @@ import CardContent from '../../../components/CardContent'
 import CardIcon from '../../../components/CardIcon'
 import Label from '../../../components/Label'
 import Value from '../../../components/Value'
+import ValueSmall from '../../../components/ValueSmall'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 import useTokenBalance from '../../../hooks/useTokenBalance'
 import { Contract } from 'web3-eth-contract'
@@ -20,6 +21,7 @@ import rhino from '../../../assets/img/rhino-a.png'
 import useWithdraw from '../../../hooks/useWithdrawRhino'
 import useAllowanceRhino from '../../../hooks/useAllowanceRhino'
 import useApproveRhino from '../../../hooks/useApproveRhino'
+import useSwapBalance2 from '../../../hooks/useSwapBalance2'
 
 interface SwapRhinoProps {
 	withdrawableBalance: BigNumber
@@ -75,6 +77,8 @@ const SwapRhino: React.FC<SwapRhinoProps> = ({ withdrawableBalance }) => {
 		}
 	}, [onApprove, setRequestedApproval])
 
+	const rhinoSupply = useSwapBalance2()
+
 	return (
 		<Card>
 			<CardContent>
@@ -115,6 +119,10 @@ const SwapRhino: React.FC<SwapRhinoProps> = ({ withdrawableBalance }) => {
 					</StyledCardActions>
 				</StyledCardContentInner>
 			</CardContent>
+			<Footnote>
+				In contract
+				<FootnoteValue><ValueSmall value={getBalanceNumber(rhinoSupply, 9)} /></FootnoteValue>
+			</Footnote>
 		</Card>
 	)
 }
@@ -143,6 +151,16 @@ const StyledCardContentInner = styled.div`
 	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
+`
+const Footnote = styled.div`
+	font-size: 14px;
+	padding: 8px 20px;
+	color: ${(props) => props.theme.color.grey[400]};
+	border-top: solid 1px ${(props) => props.theme.color.grey[300]};
+`
+const FootnoteValue = styled.div`
+	font-family: 'Roboto Mono', monospace;
+	float: right;
 `
 
 export default SwapRhino

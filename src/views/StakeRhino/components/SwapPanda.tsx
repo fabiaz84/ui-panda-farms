@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js'
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Button from '../../../components/Button'
 import Card from '../../../components/Card'
@@ -7,6 +7,7 @@ import CardContent from '../../../components/CardContent'
 import CardIcon from '../../../components/CardIcon'
 import Label from '../../../components/Label'
 import Value from '../../../components/Value'
+import ValueSmall from '../../../components/ValueSmall'
 import useModal from '../../../hooks/useModal'
 import useTokenBalance from '../../../hooks/useTokenBalance'
 import { getBalanceNumber } from '../../../utils/formatBalance'
@@ -17,8 +18,9 @@ import useAllowanceRhino from '../../../hooks/useAllowanceRhino'
 import useApproveRhino from '../../../hooks/useApproveRhino'
 import pnda from '../../../assets/img/pnda.png'
 import useDeposit from '../../../hooks/useDepositRhino'
-import { getPandaAddress, getPandaContract } from '../../../panda/utils'
+import { getPandaAddress, getPandaContract, getRhinoBalancePanda } from '../../../panda/utils'
 import usePanda from '../../../hooks/usePanda'
+import useSwapBalance1 from '../../../hooks/useSwapBalance1'
 
 interface SwapPandaProps {
 	withdrawableBalance: BigNumber
@@ -69,6 +71,8 @@ const SwapPanda: React.FC<SwapPandaProps> = ({ withdrawableBalance }) => {
 		}
 	}, [onApprove, setRequestedApproval])
 
+	const pandaSupply = useSwapBalance1()
+
 	return (
 		<Card>
 			<CardContent>
@@ -107,6 +111,10 @@ const SwapPanda: React.FC<SwapPandaProps> = ({ withdrawableBalance }) => {
 					</StyledCardActions>
 				</StyledCardContentInner>
 			</CardContent>
+			<Footnote>
+				In contract
+				<FootnoteValue><ValueSmall value={getBalanceNumber(pandaSupply, 18)} /></FootnoteValue>
+			</Footnote>
 		</Card>
 	)
 }
@@ -135,6 +143,17 @@ const StyledCardContentInner = styled.div`
 	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
+`
+
+const Footnote = styled.div`
+	font-size: 14px;
+	padding: 8px 20px;
+	color: ${(props) => props.theme.color.grey[400]};
+	border-top: solid 1px ${(props) => props.theme.color.grey[300]};
+`
+const FootnoteValue = styled.div`
+	font-family: 'Roboto Mono', monospace;
+	float: right;
 `
 
 export default SwapPanda

@@ -431,6 +431,35 @@ export const getWithdrawableBalance = async (
   }
 }
 
+
+export const getRhinoBalancePanda = async (
+  rhinoStakingContract: Contract,
+): Promise<BigNumber> => {
+  try {
+    const amount = await rhinoStakingContract.methods
+      .balance1()
+      .call()
+    console.log('balance1', amount)
+    return new BigNumber(amount)
+  } catch {
+    return new BigNumber(0)
+  }
+}
+
+export const getRhinoBalanceRhino = async (
+  rhinoStakingContract: Contract,
+): Promise<BigNumber> => {
+  try {
+    const amount = await rhinoStakingContract.methods
+      .balance2()
+      .call()
+    console.log('balance2', amount)
+    return new BigNumber(amount)
+  } catch {
+    return new BigNumber(0)
+  }
+}
+
 export const swapWithFee = async (
   rhinoStakingContract: Contract,
   fromTokenAddress: string,
